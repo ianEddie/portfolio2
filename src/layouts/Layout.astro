@@ -1,0 +1,49 @@
+---
+import Header from '../components/Header.astro'
+import ArrowUp from '../icons/ArrowUp.astro'
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en' class='scroll-smooth'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class='min-h-screen relative scroll-smooth'>
+    <div
+      class='absolute top-0 z-[-2] h-full w-full rotate-180 transform bg-blue-800 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]'
+    >
+    </div>
+    <Header />
+    <slot />
+    <ArrowUp />
+  </body>
+</html>
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  @font-face {
+    font-family: 'Slaytanic';
+    src: url('/fonts/Slaytanic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  h1 {
+    font-family: 'Slaytanic';
+  }
+</style>

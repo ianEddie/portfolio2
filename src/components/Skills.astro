@@ -1,0 +1,16 @@
+---
+import Section from '../ui/Section.astro'
+import SkillList from './SkillsList.astro'
+---
+
+<Section class='min-h-[50vh] relative flex justify-center'>
+  <img
+    src='../../public/assets/characters/character-3.png'
+    alt='character image'
+    class='h-full absolute right-10'
+  />
+  <article class='py-20 w-1/2 flex flex-col items-center'>
+    <h1 class='text-5xl tracking-[13px]'>Skills</h1>
+    <SkillList />
+  </article>
+</Section>

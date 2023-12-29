@@ -1,0 +1,30 @@
+---
+const HEADER = [
+  {
+    title: 'Home',
+    href: '#hero'
+  },
+  {
+    title: 'Sobre mi',
+    href: '#description'
+  },
+  {
+    title: 'Skills',
+    href: '#skills'
+  },
+  {
+    title: 'Proyectos',
+    href: '#projects'
+  },
+  {
+    title: 'Contacto',
+    href: '#contact'
+  }
+]
+---
+
+<header class='py-3 sticky top-0 z-10'>
+  <nav class='flex items-center justify-center gap-10'>
+    {HEADER.map(({ title, href }) => <a href={href}>{title}</a>)}
+  </nav>
+</header>

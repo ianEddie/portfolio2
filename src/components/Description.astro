@@ -1,0 +1,59 @@
+---
+import PointIcon from '../icons/PointIcon.astro'
+import Section from '../ui/Section.astro'
+import SocialPill from './SocialPill.astro'
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import GithubIcon from '../icons/Githubicon.astro'
+import MailIcon from '../icons/MailIcon.astro'
+---
+
+<Section class='flex justify-center pl-32 relative'>
+  <img
+    src='../../public/assets/characters/character-2.png'
+    alt=''
+    class='h-[30em] absolute left-10'
+  />
+  <article
+    class='relative w-1/2 flex flex-col items-center justify-around py-20'
+  >
+    <h1>Sobre mi</h1>
+    <h3
+      class='absolute top-2 right-0 flex items-center gap-x-1 italic text-lg tracking-wide text-green-400 font-semibold'
+    >
+      <PointIcon />
+      <span> Disponible</span>
+    </h3>
+    <p class='mt-20 text-xl text-pretty'>
+      Soy ian, un desarrollador web apasionado y con habilidades solidas sobre
+      front-end. Estoy listo para afrontar desafíos y contribuir al éxito de
+      proyectos digitales. Me especializo en crear experiencias impactantes y
+      funcionales, priorizando la innovación y la excelencia técnica.
+      <br />
+      <span class='text-yellow-300'>
+        Ofrezco soluciones eficientes y estéticamente atractivas.</span
+      >
+    </p>
+    <nav class='w-full flex justify-around mt-20'>
+      <SocialPill>
+        <LinkedinIcon />
+         Linkedin
+      </SocialPill>
+      <SocialPill>
+        <GithubIcon />
+         Github
+      </SocialPill>
+      <SocialPill>
+        <MailIcon />
+         ian-ortiz@hotmail.com
+      </SocialPill>
+    </nav>
+  </article>
+</Section>
+<style>
+  h1 {
+    @apply text-5xl tracking-[5px] text-cyan-200;
+  }
+  article {
+    font-family: 'Outfit Variable', sans-serif;
+  }
+</style>
