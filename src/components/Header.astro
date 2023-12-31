@@ -23,7 +23,7 @@ const HEADER = [
 ]
 ---
 
-<header class='py-3 sticky top-0 z-10'>
+<header id='header' class='py-3 sticky top-0 z-10 w-full'>
   <nav class='flex items-center justify-center gap-10'>
     {HEADER.map(({ title, href }) => <a href={href}>{title}</a>)}
   </nav>
