@@ -23,20 +23,22 @@ const PROJECTS = [
 ]
 ---
 
-<Section class='min-h-[50vh] relative flex justify-center items-center'>
+<Section 
+id="projects"
+class='min-h-[50vh] relative flex justify-center items-center'>
   <img
     src='../../public/assets/characters/character-4.webp'
     alt='character image'
     class='absolute left-10 h-2/3'
   />
-  <article class='w-1/2 mt-20 flex flex-col items-center pb-20'>
+  <article class='w-1/2 mt-20 flex flex-col items-center'>
     <h1 class='text-5xl tracking-[3px]'>Proyectos</h1>
     <div class='w-full mt-20 flex flex-col items-center justify-center gap-y-5'>
       {PROJECTS.map((project) => <ProjectItem data={project} />)}
     </div>
     <button
-      class='bg-[#20B6FF]/50 mt-10 px-5 py-1 rounded-full shadow-xl shadow-indigo-800/80 text-lg'
-      >+ Projects</button
+      class='bg-azul/50 0 mt-10 px-5 py-1 rounded-full shadow-xl shadow-indigo-800/80 text-lg'
+      >Todos</button
     >
   </article>
 </Section>
