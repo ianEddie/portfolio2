@@ -2,6 +2,7 @@
 import Section from '../ui/Section.astro'
 import ProjectItem from './ProjectItem.astro'
 import MarvelIcon from '../icons/MarvelIcon.astro'
+import MarvelMockup from '../mockup/MarvelMockup.astro'
 import DmrIcon from '../icons/DmrIcon.astro'
 const PROJECTS = [
   {
@@ -10,22 +11,24 @@ const PROJECTS = [
     description:
       'Created from scratch with Next.js and Tailwind CSS. Its a library with SVG logos from the most popular brands. Optimized for SEO and performance.',
     icon: MarvelIcon,
+    image: MarvelMockup,
     href: '#'
-  },
-  {
+  }
+  /* {
     id: '02',
     title: 'DMR',
     description:
       'Created from scratch with Next.js and Tailwind CSS. Its a library with SVG logos from the most popular brands. Optimized for SEO and performance.',
     icon: DmrIcon,
     href: '#'
-  }
+  } */
 ]
 ---
 
-<Section 
-id="projects"
-class='min-h-[50vh] relative flex justify-center items-center'>
+<Section
+  id='projects'
+  class='min-h-[50vh] relative flex justify-center items-center'
+>
   <img
     src='../../public/assets/characters/character-4.webp'
     alt='character image'

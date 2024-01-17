@@ -4,14 +4,17 @@ const { data } = Astro.props
 
 <a
   href={data.href}
-  class='w-2/3 gap-y-5 cursor-pointer font-semibold flex flex-col relative bg-indigo-700/70 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
+  class='w-[80%] gap-y-5 cursor-pointer font-semibold flex flex-col relative bg-indigo-700/70 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
 >
   <div class='w-full h-full flex justify-between'>
     <span>{data.id}.</span>
     <h2 class=''>{data.title}</h2>
   </div>
-  <div class='w-full flex items-center justify-center'>
-    <data.icon />
-  </div>
   <p>{data.description}</p>
+  <div class='w-full flex items-center justify-center'>
+    <data.image />
+  </div>
+  <div>
+    
+  </div>
 </a>
