@@ -8,6 +8,7 @@ import TailwindIcon from '../icons/TailwindIcon.astro'
 import FirebaseIcon from '../icons/FirebaseIcon.astro'
 import AstroIcon from '../icons/AstroIcon.astro'
 import JsIcon from '../icons/JsIcon.astro'
+import DmrMockup from '../mockup/DmrMockup.astro'
 
 const ICONS = {
   NEXT: {
@@ -43,8 +44,7 @@ const PROJECTS = [
     title: 'Marvel Comics',
     subtitle: 'E-commerce de comics',
     description:
-      'Creado con Next js, utilizando Firabase para crear una base de datos y administrar el registro de usuarios. Los estilos de la web fueron realizados enteramente con Tailwind css',
-    icon: MarvelIcon,
+      'Creado con Next js, utilizando Firabase para administrar una base de datos y el registro de usuarios. Los estilos de la web fueron realizados enteramente con Tailwind css',
     image: MarvelMockup,
     href: '#',
     tech: [ICONS.NEXT, ICONS.FIREBASE, ICONS.TAILWIND]
@@ -54,9 +54,8 @@ const PROJECTS = [
     title: 'DMR',
     subtitle: 'Servicio de plomeria y gas',
     description:
-      'Created from scratch with Next.js and Tailwind CSS. Its a library with SVG logos from the most popular brands. Optimized for SEO and performance.',
-    icon: MarvelIcon,
-    image: MarvelMockup,
+      'Landing page hecha para una empresa especializada en servicios de plomería y gas. El sitio fue construido con Astro 3.0 y Vanilla JavaScript. El estilo de la web esta hecho enteramente con Tailwind css.',
+    image: DmrMockup,
     href: '#',
     tech: [ICONS.ASTRO, ICONS.JAVASCRIPT, ICONS.TAILWIND]
   }
@@ -65,14 +64,14 @@ const PROJECTS = [
 
 <Section
   id='projects'
-  class='min-h-[50vh] relative flex justify-center items-center'
+  class=' relative flex justify-center items-center'
 >
   <img
     src='../../public/assets/characters/character-4.webp'
     alt='character image'
     class='absolute left-10 h-[40%]'
   />
-  <article class='w-1/2 mt-20 flex flex-col items-center'>
+  <article class='w-1/2 mt-16  flex flex-col items-center'>
     <h1 class='text-5xl tracking-[3px]'>Proyectos</h1>
     <div class='w-full mt-20 flex flex-col items-center justify-center gap-y-5'>
       {PROJECTS.map((project) => <ProjectItem data={project} />)}

@@ -1,3 +1,11 @@
-<a class='flex items-center gap-x-2 px-4 py-1 rounded-full bg-pink-400/30 ' {...Astro.props}>
+---
+const { text, bg, href } = Astro.props
+---
+
+<a
+  target='_blank'
+  href={href}
+  class={`flex items-center gap-x-2 px-4 py-1 rounded-full shadow-lg shadow-indigo-950/30 border border-stone-700 ${text} ${bg}`}
+>
   <slot />
 </a>
