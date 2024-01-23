@@ -9,24 +9,21 @@ const DATA = [
     name: 'Linkedin',
     icon: LinkedinIcon,
     iconColor: 'text-blue-400',
-    bg: 'bg-stone-800',
-    textColor: 'text-neutral-300',
+    iconColorHover: 'group-hover:text-blue-600',
     href: 'https://www.linkedin.com/in/ian-nicolas-ortiz/'
   },
   {
     name: 'Github',
     icon: Githubicon,
     iconColor: 'text-neutral-300',
-    bg: 'bg-stone-800',
-    textColor: 'text-neutral-300',
+    iconColorHover: 'group-hover:text-cyan-900',
     href: 'https://github.com/ianEddie'
   },
   {
     name: 'ian-ortiz@hotmail.com',
     icon: MailIcon,
-    iconColor: 'text-red-500',
-    bg: 'bg-stone-800',
-    textColor: 'text-stone-200',
+    iconColor: 'text-red-300',
+    iconColorHover: 'group-hover:text-red-600',
     href: '#'
   }
 ]
@@ -35,15 +32,23 @@ const DATA = [
 <nav {...Astro.props}>
   {
     DATA.map((item) => (
-      <SocialPill text={item.iconColor} bg={item.bg} href={item.href}>
-        <item.icon />
-        <span class={`${item.textColor}`}>{item.name}</span>
-      </SocialPill>
+      <div class='group '>
+        <SocialPill href={item.href}>
+          <item.icon class={`${item.iconColor} ${item.iconColorHover} icon`} />
+          <span class='group-hover:text-neutral-900 font-semibold'>
+            {item.name}
+          </span>
+        </SocialPill>
+      </div>
     ))
   }
 </nav>
 <style>
   footer {
     font-family: 'Montserrat', sans-serif;
+  }
+  .icon,
+  span {
+    @apply transition-all duration-500 ease-in-out;
   }
 </style>

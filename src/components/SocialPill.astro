@@ -1,11 +1,16 @@
 ---
-const { text, bg, href } = Astro.props
+const { text, hover, href } = Astro.props
 ---
 
 <a
   target='_blank'
   href={href}
-  class={`flex items-center gap-x-2 px-4 py-1 rounded-full shadow-lg shadow-indigo-950/30 border border-stone-700 ${text} ${bg}`}
+  class={`flex items-center gap-x-2 px-4 py-1 rounded-full shadow-lg bg-stone-800 shadow-indigo-950/30 border border-stone-700 ${text} ${hover} `}
 >
   <slot />
 </a>
+<style>
+  a {
+    @apply transition-all duration-300 hover:bg-neutral-100;
+  }
+</style>

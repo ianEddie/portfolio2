@@ -1,9 +1,9 @@
 ---
+import Cv from './Cv.astro'
 import Section from '../ui/Section.astro'
-import CodeIcon from '../icons/CodeIcon.astro'
 ---
 
-<Section class='flex relative pt-32 pl-40 h-screen' id="hero">
+<Section class='flex relative pt-32 pl-40 h-screen' id='hero'>
   <img
     src='../../public/assets/characters/character-1.png'
     alt='character image'
@@ -11,9 +11,8 @@ import CodeIcon from '../icons/CodeIcon.astro'
   />
   <article class='flex flex-col items-center'>
     <h1>Ian Ortiz</h1>
-    <h2 class='text-neutral-100 flex items-center gap-x-3'>
-      Desarrollador Web
-    </h2>
+    <h2>Desarrollador Web</h2>
+    <Cv />
   </article>
 </Section>
 <style>
@@ -23,6 +22,6 @@ import CodeIcon from '../icons/CodeIcon.astro'
   }
   h2 {
     font-family: 'BrunoAce-Regular', sans-serif;
-    @apply text-[2em] font-light text-indigo-200;
+    @apply text-[2em] font-light text-neutral-100;
   }
 </style>
