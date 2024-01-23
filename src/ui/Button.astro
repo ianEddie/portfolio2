@@ -1,0 +1,32 @@
+<button {...Astro.props}>
+  <slot />
+</button>
+<style>
+  button {
+    font-family: 'Quicksand';
+    display: inline-block;
+    font-weight: bolder;
+    text-align: center;
+    padding-inline: 15px;
+    padding-block: 3px;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #fff;
+    color: #4338CA;
+    border: 2px solid #818CF8;
+    box-shadow: 5px 5px 0px #818CF8;
+  }
+
+  button:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+</style>

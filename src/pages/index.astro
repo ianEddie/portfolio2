@@ -18,3 +18,27 @@ import Skills from '../components/Skills.astro'
     <Footer />
   </main>
 </Layout>
+<style>
+  main {
+    width: 100%;
+    height: 100%;
+    background:;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.1);
+
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
+  }
+</style>

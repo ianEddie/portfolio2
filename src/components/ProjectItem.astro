@@ -15,14 +15,16 @@ const { tech } = data
   </div>
   <div class='flex flex-col gap-y-3'>
     <h3 class='font-semibold text-amber-300 text-xl'>{data.subtitle}</h3>
-    <p class='font-medium tracking-wide text-violet-100'>{data.description}</p>
+    <p class='font-semibold text-pretty tracking-wide text-violet-100'>
+      {data.description}
+    </p>
   </div>
   <div class='flex gap-x-3'>
     {
       tech.map((item) => (
         <TechPill>
           <item.icon class={`size-5 ${item.style}`} />
-          <p class='font-normal text-violet-200'>{item.name}</p>
+          <p class='font-bold text-violet-200'>{item.name}</p>
         </TechPill>
       ))
     }
@@ -32,3 +34,8 @@ const { tech } = data
   </div>
   <ProjectLink />
 </div>
+<style>
+  p {
+    font-family: 'Quicksand';
+  }
+</style>

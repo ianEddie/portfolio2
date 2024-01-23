@@ -1,0 +1,49 @@
+---
+import Githubicon from '../icons/Githubicon.astro'
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import MailIcon from '../icons/MailIcon.astro'
+import SocialPill from './SocialPill.astro'
+
+const DATA = [
+  {
+    name: 'Linkedin',
+    icon: LinkedinIcon,
+    iconColor: 'text-blue-400',
+    bg: 'bg-stone-800',
+    textColor: 'text-neutral-300',
+    href: 'https://www.linkedin.com/in/ian-nicolas-ortiz/'
+  },
+  {
+    name: 'Github',
+    icon: Githubicon,
+    iconColor: 'text-neutral-300',
+    bg: 'bg-stone-800',
+    textColor: 'text-neutral-300',
+    href: 'https://github.com/ianEddie'
+  },
+  {
+    name: 'ian-ortiz@hotmail.com',
+    icon: MailIcon,
+    iconColor: 'text-red-500',
+    bg: 'bg-stone-800',
+    textColor: 'text-stone-200',
+    href: '#'
+  }
+]
+---
+
+<nav {...Astro.props}>
+  {
+    DATA.map((item) => (
+      <SocialPill text={item.iconColor} bg={item.bg} href={item.href}>
+        <item.icon />
+        <span class={`${item.textColor}`}>{item.name}</span>
+      </SocialPill>
+    ))
+  }
+</nav>
+<style>
+  footer {
+    font-family: 'Montserrat', sans-serif;
+  }
+</style>

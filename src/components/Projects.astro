@@ -9,6 +9,7 @@ import FirebaseIcon from '../icons/FirebaseIcon.astro'
 import AstroIcon from '../icons/AstroIcon.astro'
 import JsIcon from '../icons/JsIcon.astro'
 import DmrMockup from '../mockup/DmrMockup.astro'
+import Button from '../ui/Button.astro'
 
 const ICONS = {
   NEXT: {
@@ -62,24 +63,18 @@ const PROJECTS = [
 ]
 ---
 
-<Section
-  id='projects'
-  class=' relative flex justify-center items-center'
->
+<Section id='projects' class='relative flex justify-center items-center'>
   <img
     src='../../public/assets/characters/character-4.webp'
     alt='character image'
     class='absolute left-10 h-[40%]'
   />
-  <article class='w-1/2 mt-16  flex flex-col items-center'>
+  <article class='w-1/2 mt-20 flex flex-col items-center'>
     <h1 class='text-5xl tracking-[3px]'>Proyectos</h1>
-    <div class='w-full mt-20 flex flex-col items-center justify-center gap-y-5'>
+    <div class='w-full mt-14 flex flex-col items-center justify-center gap-y-5'>
       {PROJECTS.map((project) => <ProjectItem data={project} />)}
     </div>
-    <button
-      class='bg-azul/50 0 mt-10 px-5 py-1 rounded-full shadow-xl shadow-indigo-800/80 text-lg'
-      >Todos</button
-    >
+    <Button class="mt-14 bg-stone-300 text-neutral-900">Todos</Button>
   </article>
 </Section>
 <style>

@@ -1,27 +1,24 @@
 ---
-import Footer from './Footer.astro'
+import Contact from './Contact.astro'
 import PointIcon from '../icons/PointIcon.astro'
 import Section from '../ui/Section.astro'
 ---
 
-<Section
-  id='description'
-  class='flex justify-center items-center relative h-screen'
->
+<Section id='description' class='flex justify-center items-center relative'>
   <img
     src='../../public/assets/characters/character-2.png'
     alt=''
-    class='h-2/3 absolute left-10'
+    class='h-[80%] absolute left-10'
   />
-  <article class='relative w-1/2 flex flex-col items-center justify-around'>
-    <h1 class='mt-14'>Sobre mi</h1>
+  <article class='relative w-1/2 flex flex-col items-center pt-20'>
+    <h1>Sobre mi</h1>
     <h3
-      class='absolute top-3 right-0 flex items-center gap-x-1 italic text-lg tracking-wide text-green-400 font-semibold'
+      class='absolute top-0 right-0 flex items-center gap-x-1 italic text-lg tracking-wide text-green-400 font-semibold'
     >
       <PointIcon />
       <span> Disponible</span>
     </h3>
-    <p class='mt-14 font-medium text-xl text-pretty max-w-[80%]'>
+    <p class='mt-14 font-semibold text-[20px] text-pretty max-w-[90%]'>
       Soy ian, un desarrollador web apasionado y con habilidades solidas sobre
       front-end. Estoy listo para afrontar desafíos y contribuir al éxito de
       proyectos digitales. Me especializo en crear experiencias impactantes y
@@ -31,14 +28,14 @@ import Section from '../ui/Section.astro'
         Ofrezco soluciones eficientes y estéticamente atractivas.</span
       >
     </p>
-    <Footer />
+    <Contact class='w-full flex justify-center gap-x-10 mt-14' />
   </article>
 </Section>
 <style>
   h1 {
     @apply text-5xl tracking-[5px] text-neutral-100;
   }
-  article {
-    font-family: 'Outfit Variable', sans-serif;
+  p {
+    font-family: 'Montserrat', sans-serif;
   }
 </style>
