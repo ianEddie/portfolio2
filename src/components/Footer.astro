@@ -6,16 +6,25 @@ import Whatsapp from '../icons/Whatsapp.astro'
 ---
 
 <footer id='contact' class='w-full flex flex-col items-center justify-center'>
-  <h1 class='mt-20'>Contacto</h1>
+  <h1 class='mt-16'>Contacto</h1>
   <Form />
   <nav class='flex m-10 gap-x-5'>
-    <LinkedinIcon class='size-9 border-b pb-1 text-purple-200' />
-    <MailIcon class='size-9 border-b pb-1 text-purple-200' />
-    <Whatsapp class='size-9 border-b pb-1 text-purple-200' />
+    <LinkedinIcon
+      class='size-9 border-b pb-1 text-neutral-100 hover:text-blue-400 icon'
+    />
+    <MailIcon
+      class='size-9 border-b pb-1 text-neutral-100 hover:text-red-400 icon'
+    />
+    <Whatsapp
+      class='size-9 border-b pb-1 text-neutral-100 hover:text-green-400 icon'
+    />
   </nav>
 </footer>
 <style>
   h1 {
     @apply text-4xl tracking-[5px] text-neutral-100;
+  }
+  .icon {
+    @apply hover:-translate-y-1 cursor-pointer transition-all duration-300;
   }
 </style>

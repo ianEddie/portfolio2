@@ -2,18 +2,20 @@
 import Download from '../icons/Download.astro'
 ---
 
-<button class='button flex mt-7'>
-  <span class='button__text'>Curriculum</span>
-  <span class='button__icon'>
-    <Download class='svg size-7 text-neutral-100' />
-  </span>
-</button>
+<a download="ian-ortiz-cv.pdf" href="../../public/ian-ortiz-cv.pdf">
+  <button class='button flex mt-7'>
+    <span class='button__text'>Curriculum</span>
+    <span class='button__icon'>
+      <Download class='svg size-7 text-neutral-100' />
+    </span>
+  </button>
+</a>
 <style>
   .button {
     --main-focus: #2d8cf0;
-    --font-color: #171717;
+    --font-color: #000;
     --bg-color-sub: #4f46e5;
-    --bg-color: #f5f5f5;
+    --bg-color: #d4d4d4;
     --main-color: #262626;
     position: relative;
     width: 150px;

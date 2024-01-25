@@ -7,12 +7,12 @@ const HEADER = [
     href: '#description'
   },
   {
-    title: 'Skills',
-    href: '#skills'
-  },
-  {
     title: 'Proyectos',
     href: '#projects'
+  },
+  {
+    title: 'Skills',
+    href: '#skills'
   },
   {
     title: 'Contacto',
@@ -23,15 +23,18 @@ const HEADER = [
 
 <header
   id='header'
-  class='py-2 sticky top-0 z-10 w-full flex justify-between items-center'
+  class='py-1 sticky px-10 top-0 z-10 w-full flex justify-between items-center'
 >
   <Logo />
-  <nav class='flex items-center justify-center gap-10 pr-10 text-sm'>
+  <nav class='flex items-center justify-center gap-10 text-sm'>
     {HEADER.map(({ title, href }) => <a href={href}>{title}</a>)}
   </nav>
 </header>
 <style>
   nav {
     font-family: 'BrunoAce-Regular', sans-serif;
+  }
+  span {
+    font-family: 'Slaytanic';
   }
 </style>
