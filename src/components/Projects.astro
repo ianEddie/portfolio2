@@ -67,11 +67,13 @@ const PROJECTS = [
   <img
     src='https://i.postimg.cc/6Q5qhv1L/character-4.webp'
     alt='character image'
-    class='absolute left-10 h-[40%]'
+    class='lg:absolute lg:flex hidden left-10 h-1/3'
   />
-  <article class='w-1/2 mt-20 flex flex-col items-center'>
+  <article class='lg:w-1/2 mt-20 flex flex-col items-center'>
     <h1 class='text-5xl tracking-[3px]'>Proyectos</h1>
-    <div class='w-full mt-14 flex flex-col items-center justify-center gap-y-5'>
+    <div
+      class='w-full mt-14 flex flex-col items-center justify-center gap-y-10'
+    >
       {PROJECTS.map((project) => <ProjectItem data={project} />)}
     </div>
     <Button class='mt-14 bg-stone-300 text-neutral-900'>Todos</Button>

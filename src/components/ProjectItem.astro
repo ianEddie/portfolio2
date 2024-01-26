@@ -7,7 +7,7 @@ const { tech } = data
 ---
 
 <div
-  class='w-[80%] gap-y-5 cursor-pointer flex flex-col relative bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
+  class='lg:w-[80%] w-[90%] gap-y-5 cursor-pointer flex flex-col relative bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
 >
   <div class='w-full h-full flex justify-between font-semibold'>
     <span>{data.id}.</span>
@@ -19,12 +19,14 @@ const { tech } = data
       {data.description}
     </p>
   </div>
-  <div class='flex gap-x-3'>
+  <div class='flex gap-3'>
     {
       tech.map((item) => (
         <TechPill>
           <item.icon class={`size-5 ${item.style}`} />
-          <p class='font-bold text-violet-200'>{item.name}</p>
+          <p class='font-bold text-violet-200 lg:text-lg text-xs '>
+            {item.name}
+          </p>
         </TechPill>
       ))
     }

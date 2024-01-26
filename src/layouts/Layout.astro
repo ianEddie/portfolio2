@@ -16,9 +16,9 @@ const { title } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class='min-h-screen relative scroll-smooth flex flex-col items-center'>
+  <body class='relative w-full flex flex-col'>
     <div
-      class='absolute top-0 z-[-2] h-full w-full rotate-180 transform bg-blue-800 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]'
+      class='absolute top-0 right-0 z-[-2] h-full w-full rotate-180 transform bg-blue-800 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]'
     >
     </div>
     <Header />
@@ -32,6 +32,7 @@ const { title } = Astro.props
   body {
     margin: 0;
     padding: 0;
+    border: 0;
   }
   @font-face {
     font-family: 'Slaytanic';

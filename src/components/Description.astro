@@ -8,9 +8,9 @@ import Section from '../ui/Section.astro'
   <img
     src='https://i.postimg.cc/0j7KP7Tw/character-2-0.webp'
     alt=''
-    class='h-[90%] w-auto absolute left-10'
+    class='lg:h-[90%] lg:w-auto lg:absolute lg:flex left-10 hidden'
   />
-  <article class='relative w-1/2 flex flex-col items-center pt-20'>
+  <article class='relative lg:w-1/2 w-full flex flex-col items-center pt-20'>
     <h1>Sobre mi</h1>
     <h3
       class='text-lime-300 absolute top-0 right-0 flex items-center py-[2px] rounded-xl px-4 italic text-xl tracking-wide font-semibold'
@@ -18,7 +18,9 @@ import Section from '../ui/Section.astro'
       <PointIcon />
       <span> Disponible</span>
     </h3>
-    <p class='mt-14 font-semibold text-[20px] text-pretty max-w-[90%]'>
+    <p
+      class='mt-14 font-semibold text-[20px] lg:text-pretty text-balance max-w-[90%]'
+    >
       Soy ian, un desarrollador web apasionado y con habilidades solidas sobre
       front-end. Estoy listo para afrontar desafíos y contribuir al éxito de
       proyectos digitales. Me especializo en crear experiencias impactantes y
@@ -28,7 +30,9 @@ import Section from '../ui/Section.astro'
         Ofrezco soluciones eficientes y estéticamente atractivas.</span
       >
     </p>
-    <Contact class='w-full flex justify-center gap-x-10 mt-14' />
+    <Contact
+      class='w-full mt-14 flex items-center flex-wrap justify-center gap-5'
+    />
   </article>
 </Section>
 <style>

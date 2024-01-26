@@ -23,18 +23,80 @@ const HEADER = [
 
 <header
   id='header'
-  class='py-1 sticky px-10 top-0 z-10 w-full flex justify-between items-center'
+  class='flex justify-between fixed z-40 w-full py-1 sm:px-10 px-6 rounded-b-3xl'
 >
+  <!-- Logo -->
   <Logo />
-  <nav class='flex items-center justify-center gap-10 text-sm'>
-    {HEADER.map(({ title, href }) => <a href={href}>{title}</a>)}
+
+  <!-- Toggle Action -->
+  <label for='menu'></label>
+  <input type='checkbox' id='menu' />
+  <!-- nav -->
+  <nav
+    class='flex justify-end gap-x-2 items-center font-semibold text-neutral-100 text-sm tracking-wider'
+  >
+    <div
+      class='absolute top-0 right-0 z-[-2] h-full w-full rotate-180 transform bg-blue-800 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]'
+    >
+    </div>
+    {HEADER.map((item) => <a href={item.href}>{item.title}</a>)}
   </nav>
+  <!-- Toggle Button  -->
+  <div>
+    <button>.</button>
+  </div>
 </header>
 <style>
-  nav {
-    font-family: 'BrunoAce-Regular', sans-serif;
+  header {
+    font-family: 'BrunoAce-Regular';
   }
-  span {
-    font-family: 'Slaytanic';
+  /* Desktop */
+  a {
+    @apply px-2 py-1 rounded-2xl transition-all duration-500;
+  }
+  a:hover {
+    @apply bg-neutral-100 text-red-900;
+  }
+
+  label,
+  input,
+  div {
+    @apply hidden;
+  }
+  /* Phone */
+  @media screen and (max-width: 600px) {
+    header {
+      @apply flex justify-between;
+    }
+    div {
+      @apply flex justify-center items-center pr-2;
+    }
+    button {
+      @apply size-6 z-30 transition-all duration-300 text-transparent;
+    }
+    #menu:not(:checked) ~ div > button {
+      background-image: url('https://i.postimg.cc/Dw1MBg4N/menu.webp');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    #menu:checked ~ div > button {
+      background-image: url('https://i.postimg.cc/FKmnqLjH/close.webp');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    label {
+      @apply flex w-10 h-full absolute z-40 top-0 right-8 cursor-pointer;
+    }
+    nav {
+      clip-path: circle(0 at center);
+      transition: clip-path 0.7s ease-in-out;
+      @apply absolute  top-0 right-0 w-full h-screen flex flex-col items-center justify-center gap-y-14 z-30;
+    }
+    button {
+      @apply flex;
+    }
+    input:checked + nav {
+      clip-path: circle(100% at center);
+    }
   }
 </style>
