@@ -2,7 +2,7 @@
 import Button from '../ui/Button.astro'
 ---
 
-<form name='contact' netlify>
+<form netlify>
   <div class='form__group field'>
     <input
       type='text'
@@ -42,7 +42,7 @@ import Button from '../ui/Button.astro'
     @apply flex flex-col gap-y-2;
   }
   input {
-    @apply text-center py-1 font-semibold;
+    @apply text-center py-1  text-sm;
   }
 
   .form__group {
@@ -54,13 +54,12 @@ import Button from '../ui/Button.astro'
 
   .form__field {
     font-family: inherit;
-    width: 100%;
     border: none;
     border-bottom: 1px solid #f5f5f4;
     outline: 0;
-    font-size: 17px;
+    font-size: 15px;
     color: #f5f5f4;
-    padding: 7px 0;
+    padding: 10px 10px;
     background: transparent;
     transition: border-color 1s;
   }
@@ -88,27 +87,18 @@ import Button from '../ui/Button.astro'
     top: 0;
     display: block;
     transition: 0.2s;
-    font-size: 17px;
+    font-size: 15px;
     color: #f5f5f4;
     pointer-events: none;
   }
 
   .form__field:focus {
     padding-bottom: 6px;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 15px;
     border-width: 2px;
     border-image: linear-gradient(to right, #60a5fa, #0369a1);
     border-image-slice: 1;
-  }
-
-  .form__field:focus ~ .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 17px;
-    color: #e7e5e4;
-    font-weight: 700;
   }
 
   /* reset input */
