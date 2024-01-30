@@ -11,7 +11,9 @@ import Section from '../ui/Section.astro'
   />
   <article class='lg:w-auto w-full flex flex-col items-center'>
     <h1>Ian Ortiz</h1>
-    <h2>Desarrollador Web</h2>
+    <h2 class='lg:text-[2em] text-2xl font-light text-neutral-100'>
+      Desarrollador Web
+    </h2>
     <Cv />
   </article>
 </Section>
@@ -22,6 +24,5 @@ import Section from '../ui/Section.astro'
   }
   h2 {
     font-family: 'BrunoAce-Regular', sans-serif;
-    @apply text-[2em] font-light text-neutral-100;
   }
 </style>
