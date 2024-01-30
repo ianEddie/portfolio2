@@ -2,13 +2,25 @@
 import Button from '../ui/Button.astro'
 ---
 
-<form>
+<form name='contact' netlify>
   <div class='form__group field'>
-    <input type='text' class='form__field' placeholder='Name' required />
-    <label for='name' class='form__label'>Name</label>
+    <input
+      type='text'
+      class='form__field'
+      placeholder='Name'
+      name='name'
+      required
+    />
+    <label for='name' class='form__label'>Nombre</label>
   </div>
   <div class='form__group field'>
-    <input type='email' class='form__field' placeholder='email' required />
+    <input
+      type='email'
+      class='form__field'
+      placeholder='email'
+      name='email'
+      required
+    />
     <label for='email' class='form__label'>E-mail</label>
   </div>
   <div class='col-span-2'>
@@ -18,7 +30,7 @@ import Button from '../ui/Button.astro'
       required></textarea>
   </div>
   <div class='col-span-2 flex justify-center items-center'>
-    <Button>Enviar</Button>
+    <Button type='submit'>Enviar</Button>
   </div>
 </form>
 <style>
