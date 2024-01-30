@@ -2,7 +2,7 @@
 import Button from '../ui/Button.astro'
 ---
 
-<form netlify>
+<form name='contact' netlify>
   <div class='form__group field'>
     <input
       type='text'
@@ -26,6 +26,7 @@ import Button from '../ui/Button.astro'
   <div class='col-span-2'>
     <label>Escriba su mensaje</label>
     <textarea
+      name='message'
       class='bg-transparent border min-h-24 text-center py-1 font-semibold'
       required></textarea>
   </div>
