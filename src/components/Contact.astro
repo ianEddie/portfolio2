@@ -24,7 +24,7 @@ const DATA = [
     icon: MailIcon,
     iconColor: 'text-red-300',
     iconColorHover: 'group-hover:text-red-600',
-    href: '#'
+    href: 'mailto:ian-ortiz@hotmail.com?Subject=Hola,%20te%20contacto%20desde%20tu%20portfolio'
   }
 ]
 ---
@@ -33,7 +33,7 @@ const DATA = [
   {
     DATA.map((item) => (
       <div class='group '>
-        <SocialPill href={item.href} class="transition-all duration-300">
+        <SocialPill href={item.href} class='transition-all duration-300'>
           <item.icon class={`${item.iconColor} ${item.iconColorHover} icon`} />
           <span class='group-hover:text-neutral-900 font-semibold'>
             {item.name}

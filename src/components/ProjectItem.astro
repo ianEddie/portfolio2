@@ -3,11 +3,11 @@ import ProjectLink from './ProjectLink.astro'
 import TechPill from './TechPill.astro'
 
 const { data } = Astro.props
-const { tech } = data
+const { tech, github, web } = data
 ---
 
 <div
-  class='lg:w-[80%] w-[90%] gap-y-5 cursor-pointer flex flex-col relative bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
+  class='lg:w-[80%] w-[90%] gap-y-5 flex flex-col relative bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
 >
   <div class='w-full h-full flex justify-between font-semibold'>
     <span>{data.id}.</span>
@@ -34,7 +34,7 @@ const { tech } = data
   <div class='w-full flex items-center justify-center'>
     <data.image class='border border-indigo-600' />
   </div>
-  <ProjectLink />
+  <ProjectLink github={github} web={web} />
 </div>
 <style>
   p {

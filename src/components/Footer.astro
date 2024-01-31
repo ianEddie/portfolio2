@@ -6,18 +6,27 @@ import Whatsapp from '../icons/Whatsapp.astro'
 ---
 
 <footer id='contact' class='flex flex-col items-center justify-center px-10'>
-  <h1 class="mt-12">Contacto</h1>
+  <h1 class='mt-12'>Contacto</h1>
   <Form />
   <nav class='flex gap-x-5 py-12'>
-    <LinkedinIcon
-      class='size-9 border-b pb-1 text-neutral-100 hover:text-blue-400 icon'
-    />
-    <MailIcon
-      class='size-9 border-b pb-1 text-neutral-100 hover:text-red-400 icon'
-    />
-    <Whatsapp
-      class='size-9 border-b pb-1 text-neutral-100 hover:text-green-400 icon'
-    />
+    <a href='https://www.linkedin.com/in/ian-nicolas-ortiz/' target='_blank'>
+      <LinkedinIcon
+        class='size-9 border-b pb-1 text-neutral-100 hover:text-blue-400 icon'
+      />
+    </a>
+    <a
+      href='mailto:ian-ortiz@hotmail.com?Subject=Hola,%20te%20contacto%20desde%20tu%20portfolio'
+      target='_blank'
+    >
+      <MailIcon
+        class='size-9 border-b pb-1 text-neutral-100 hover:text-red-400 icon'
+      />
+    </a>
+    <a href='https://wa.link/2ydtqt' target='_blank'>
+      <Whatsapp
+        class='size-9 border-b pb-1 text-neutral-100 hover:text-green-400 icon'
+      />
+    </a>
   </nav>
 </footer>
 <style>

@@ -47,7 +47,8 @@ const PROJECTS = [
     description:
       'Creado con Next js, utilizando Firabase para administrar una base de datos y el registro de usuarios. Los estilos de la web fueron realizados enteramente con Tailwind css',
     image: MarvelMockup,
-    href: '#',
+    github: 'https://github.com/ianEddie/Entrega-final-ian-ortiz',
+    web: 'https://entrega-final-ian-ortiz.vercel.app/',
     tech: [ICONS.NEXT, ICONS.FIREBASE, ICONS.TAILWIND]
   },
   {
@@ -57,7 +58,8 @@ const PROJECTS = [
     description:
       'Landing page hecha para una empresa especializada en servicios de plomería y gas. El sitio fue construido con Astro 3.0 y Vanilla JavaScript. El estilo de la web esta hecho enteramente con Tailwind css.',
     image: DmrMockup,
-    href: '#',
+    github: 'https://github.com/ianEddie/DMR-II',
+    web: 'https://dmrv2.netlify.app/',
     tech: [ICONS.ASTRO, ICONS.JAVASCRIPT, ICONS.TAILWIND]
   }
 ]
@@ -76,7 +78,9 @@ const PROJECTS = [
     >
       {PROJECTS.map((project) => <ProjectItem data={project} />)}
     </div>
-    <Button class='mt-14 bg-stone-300 text-neutral-900'>Todos</Button>
+    <a href='https://github.com/ianEddie' target='_blank'>
+      <Button class='mt-14 bg-stone-300 text-neutral-900'>Todos</Button>
+    </a>
   </article>
 </Section>
 <style>
