@@ -5,21 +5,21 @@ import WebIcon from '../icons/WebIcon.astro'
 const { github, web } = Astro.props
 ---
 
-<div class='flex items-center justify-around gap-x-5 font-medium'>
-  <a
-    href={web}
-    target='_blank'
-    class='text-zinc-300 flex items-center justify-center gap-x-1 px-3 py-1 rounded-full bg-zinc-900/70 shadow-lg shadow-indigo-900'
-  >
-    <WebIcon class='size-7 text-blue-500' />
-    Visitar
+<footer
+  class='col-span-2 flex items-center justify-center gap-x-10 font-medium order-3'
+>
+  <a href={web} target='_blank'>
+    <WebIcon class='size-6 text-blue-400' />
+    visitar
   </a>
-  <a
-    href={github}
-    target='_blank'
-    class='text-zinc-300 flex items-center justify-center gap-x-1 px-3 py-1 rounded-full bg-zinc-900/70 shadow-md shadow-indigo-900'
-  >
-    <Githubicon class='size-7 text-violet-500' />
-    Repositorio
+  <a href={github} target='_blank'>
+    <Githubicon class='size-6 text-neutral-400' />
+    repositorio
   </a>
-</div>
+</footer>
+<style>
+  a {
+    @apply text-zinc-300 flex items-center justify-center gap-x-1 px-5 py-[5px] rounded-full bg-neutral-900/90 shadow-md shadow-indigo-950/50
+    hover:scale-110 hover:bg-slate-100 hover:text-neutral-900 transition-all duration-300;
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import { CONTACT_DATA } from '../lib/footer-contact-data.astro'
+---
+
+<nav class='flex gap-x-8 mt-8'>
+  {
+    CONTACT_DATA.map((item) => (
+      <a
+        href={item.href}
+        target='_blank'
+        class={`rounded-lg p-[2px] hover:scale-110 hover:shadow-lg  hover:-translate-y-1  text-neutral-100 ${item.class} transition-all duration-300`}
+      >
+        <item.icon class='size-8' />
+      </a>
+    ))
+  }
+</nav>

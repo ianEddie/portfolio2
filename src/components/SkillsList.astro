@@ -1,58 +1,18 @@
 ---
-import HtmlIcon from '../icons/HtmlIcon.astro'
-import CssIcon from '../icons/CssIcon.astro'
-import JsIcon from '../icons/JsIcon.astro'
-import ReactIcon from '../icons/ReactIcon.astro'
-import NextIcon from '../icons/NextIcon.astro'
-import AstroIcon from '../icons/AstroIcon.astro'
-import TailwindIcon from '../icons/TailwindIcon.astro'
-import FirebaseIcon from '../icons/FirebaseIcon.astro'
-
-const SKILLS = [
-  {
-    title: 'Html',
-    icon: HtmlIcon
-  },
-  {
-    title: 'Css',
-    icon: CssIcon
-  },
-  {
-    title: 'JavaScript',
-    icon: JsIcon
-  },
-  {
-    title: 'React',
-    icon: ReactIcon
-  },
-  {
-    title: 'Next js',
-    icon: NextIcon
-  },
-  {
-    title: 'Astro',
-    icon: AstroIcon
-  },
-  {
-    title: 'Tailwind css',
-    icon: TailwindIcon
-  },
-  {
-    title: 'Firebase',
-    icon: FirebaseIcon
-  }
-]
+import { SKILLS } from '../lib/skills-data.astro'
+import style from '@/animations/animation.module.css'
 ---
 
-<li
-  class='list-none lg:flex grid grid-rows-2 grid-flow-col lg:px-0 px-10 gap-y-10 mt-20 w-full justify-around'
->
+<ul class='mt-20 flex gap-x-10'>
   {
     SKILLS.map((skill) => (
-      <span class='flex flex-col items-center text-neutral-300 gap-y-1 font-semibold'>
+      <li
+        class={`${style.animation} flex flex-col items-center text-neutral-300 gap-y-1 font-semibold`}
+      >
         <skill.icon class='size-14 text-purple-200' />
         {skill.title}
-      </span>
+      </li>
     ))
   }
-</li>
+</ul>
+

@@ -1,0 +1,29 @@
+---
+import { ICONS } from './projects-icons-data.astro'
+
+export const PROJECTS = [
+  {
+    id: '01',
+    title: 'Seeds Shop',
+    subtitle: 'Tienda online',
+    description:
+      'Creado con Next js, utilizando Firabase para administrar una base de datos y el registro de usuarios. Los estilos de la web fueron realizados enteramente con Tailwind css',
+    image:
+      'https://i.postimg.cc/d3r7V6z0/Macbook-Air-seeds-shop-vercel-app.png',
+    github: 'https://github.com/ianEddie/seeds-shop',
+    web: 'https://seeds-shop.vercel.app/',
+    tech: [ICONS.ASTRO, ICONS.REACT, ICONS.TAILWIND],
+  },
+  {
+    id: '02',
+    title: 'DMR',
+    subtitle: 'Landing page',
+    description:
+      'Landing page hecha para una empresa especializada en servicios de plomería y gas. El sitio fue construido con Astro 3.0 y Vanilla JavaScript. El estilo de la web esta hecho enteramente con Tailwind css.',
+    image: 'https://i.postimg.cc/8cB6d2v9/dmr-mockup.png',
+    github: 'https://github.com/ianEddie/DMR-II',
+    web: 'https://dmrv2.netlify.app/',
+    tech: [ICONS.ASTRO, ICONS.JAVASCRIPT, ICONS.TAILWIND],
+  }
+]
+---

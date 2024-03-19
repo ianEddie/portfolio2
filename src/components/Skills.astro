@@ -1,16 +1,10 @@
 ---
 import Section from '../ui/Section.astro'
 import SkillList from './SkillsList.astro'
+import style from '@/animations/animation.module.css'
 ---
 
-<Section id='skills' class='relative flex justify-center items-center'>
-  <img
-    src='https://i.postimg.cc/Df1sCqw1/character-3-0.webp'
-    alt='character image'
-    class='lg:h-full lg:absolute lg:flex hidden lg:right-10 z-0'
-  />
-  <article class='lg:w-1/2 w-full flex flex-col items-center lg:py-20 py-32'>
-    <h1 class='text-5xl tracking-[13px]'>Skills</h1>
-    <SkillList />
-  </article>
+<Section id='skills' class='w-full flex flex-col items-center lg:py-20 py-32'>
+  <h1 class={`${style.animation} text-5xl tracking-[13px]`}>Skills</h1>
+  <SkillList />
 </Section>

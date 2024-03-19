@@ -1,9 +1,10 @@
 ---
 import Button from '../ui/Button.astro'
+import style from '@/animations/animation.module.css'
 ---
 
 <form name='contact' netlify>
-  <div class='form__group field'>
+  <div class={`${style.animation} form__group field`}>
     <input
       type='text'
       class='form__field'
@@ -13,7 +14,7 @@ import Button from '../ui/Button.astro'
     />
     <label for='name' class='form__label'>Nombre</label>
   </div>
-  <div class='form__group field'>
+  <div class={`${style.animation} form__group field`}>
     <input
       type='email'
       class='form__field'
@@ -23,7 +24,7 @@ import Button from '../ui/Button.astro'
     />
     <label for='email' class='form__label'>E-mail</label>
   </div>
-  <div class='col-span-2'>
+  <div class={`${style.animation} col-span-2`}>
     <label>Escriba su mensaje</label>
     <textarea
       name='message'

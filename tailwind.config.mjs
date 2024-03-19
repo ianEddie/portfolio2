@@ -5,6 +5,9 @@ export default {
     extend: {
       colors: {
         azul: '#20B6FF'
+      },
+      fontFamily: {
+        parrafo: 'Quicksand'
       }
     }
   },

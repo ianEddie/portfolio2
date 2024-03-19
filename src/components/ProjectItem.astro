@@ -3,41 +3,67 @@ import ProjectLink from './ProjectLink.astro'
 import TechPill from './TechPill.astro'
 
 const { data } = Astro.props
-const { tech, github, web } = data
+const { tech, github, web, id, title, subtitle, description, image, order } =
+  data
 ---
 
-<div
-  class='lg:w-[80%] w-[90%] gap-y-5 flex flex-col relative bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
+<article
+  class='w-[40%] flex flex-col gap-y-5 bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
 >
-  <div class='w-full h-full flex justify-between font-semibold'>
-    <span>{data.id}.</span>
-    <h2>{data.title}</h2>
+  <!--  -->
+  <div class='col-span-2 flex justify-between text-xl font-medium'>
+    <span>{id}.</span>
+    <h2>{title}</h2>
   </div>
-  <div class='flex flex-col gap-y-3'>
-    <h3 class='font-semibold text-amber-300 text-xl'>{data.subtitle}</h3>
-    <p class='font-semibold text-pretty tracking-wide text-violet-100'>
-      {data.description}
+  <!--  -->
+  <div class={`flex flex-col`}>
+    <h3 class='font-medium text-xl text-amber-300'>{subtitle}</h3>
+    <p
+      class='text-pretty text-lg mt-3 text-neutral-200 tracking-wide font-parrafo font-semibold'
+    >
+      {description}
     </p>
+    <div class='flex mt-5 gap-x-3'>
+      {
+        tech.map((item) => (
+          <TechPill>
+            <item.icon class={`size-5 ${item.style}`} />
+            <span class='font-semibold text-neutral-200 tracking-wide lg:text-base text-xs'>
+              {item.name}
+            </span>
+          </TechPill>
+        ))
+      }
+    </div>
   </div>
-  <div class='flex gap-3'>
-    {
-      tech.map((item) => (
-        <TechPill>
-          <item.icon class={`size-5 ${item.style}`} />
-          <p class='font-bold text-violet-200 lg:text-lg text-xs '>
-            {item.name}
-          </p>
-        </TechPill>
-      ))
-    }
-  </div>
-  <div class='w-full flex items-center justify-center'>
-    <data.image class='border border-indigo-600' />
-  </div>
+  <!--  -->
+  <picture class='flex items-center justify-center'>
+    <img src={image} alt='' class='' />
+  </picture>
+  <!--  -->
   <ProjectLink github={github} web={web} />
-</div>
+</article>
+
 <style>
   p {
     font-family: 'Quicksand';
+  }
+  article {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      translate: 0 200px;
+      scale: 0;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
   }
 </style>
