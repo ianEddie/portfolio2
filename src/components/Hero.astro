@@ -3,19 +3,23 @@ import Cv from './Cv.astro'
 import Section from '../ui/Section.astro'
 ---
 
-<Section class='flex relative lg:pt-32 pt-20 lg:pl-40 h-screen' id='hero'>
-  <img
-    src='https://i.postimg.cc/ZKZNXCW2/character-1-0.webp'
-    alt='character image'
-    class='absolute lg:top-14 lg:bottom-10 bottom-0 right-0'
-  />
-  <article class='lg:w-auto w-full flex flex-col items-center'>
+<Section class='h-screen grid lg:grid-cols-2 grid-cols-1' id='hero'>
+  <!-- Info -->
+  <article class='lg:w-auto w-full lg:mt-32 mt-16 flex flex-col items-center'>
     <h1>Ian Ortiz</h1>
     <h2 class='lg:text-[2em] text-2xl font-light text-neutral-100'>
       Desarrollador Web
     </h2>
     <Cv />
   </article>
+  <!-- Image -->
+  <picture class='flex justify-end pt-20'>
+    <img
+      src='https://i.postimg.cc/ZKZNXCW2/character-1-0.webp'
+      alt='character image'
+      class='aspect-square h-[90%]'
+    />
+  </picture>
 </Section>
 <style>
   h1 {

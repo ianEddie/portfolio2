@@ -8,10 +8,10 @@ const { tech, github, web, id, title, subtitle, description, image, order } =
 ---
 
 <article
-  class='w-[40%] flex flex-col gap-y-5 bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
+  class='lg:w-[40%] w-full flex flex-col bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
 >
   <!--  -->
-  <div class='col-span-2 flex justify-between text-xl font-medium'>
+  <div class='col-span-2 flex justify-between lg:text-xl text-base font-medium'>
     <span>{id}.</span>
     <h2>{title}</h2>
   </div>
@@ -19,7 +19,7 @@ const { tech, github, web, id, title, subtitle, description, image, order } =
   <div class={`flex flex-col`}>
     <h3 class='font-medium text-xl text-amber-300'>{subtitle}</h3>
     <p
-      class='text-pretty text-lg mt-3 text-neutral-200 tracking-wide font-parrafo font-semibold'
+      class='text-pretty lg:text-lg text-sm mt-3 text-neutral-200 tracking-wide font-parrafo font-semibold'
     >
       {description}
     </p>
@@ -28,7 +28,7 @@ const { tech, github, web, id, title, subtitle, description, image, order } =
         tech.map((item) => (
           <TechPill>
             <item.icon class={`size-5 ${item.style}`} />
-            <span class='font-semibold text-neutral-200 tracking-wide lg:text-base text-xs'>
+            <span class='lg:font-semibold text-center text-neutral-200 tracking-wide lg:text-base text-xs'>
               {item.name}
             </span>
           </TechPill>
@@ -36,11 +36,11 @@ const { tech, github, web, id, title, subtitle, description, image, order } =
       }
     </div>
   </div>
-  <!--  -->
-  <picture class='flex items-center justify-center'>
-    <img src={image} alt='' class='' />
+  <!-- Image  -->
+  <picture class='flex items-center justify-center mt-10'>
+    <img src={image} alt='screenshot' class='aspect-auto' />
   </picture>
-  <!--  -->
+  <!-- footer  -->
   <ProjectLink github={github} web={web} />
 </article>
 

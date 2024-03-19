@@ -7,14 +7,14 @@ import Section from '../ui/Section.astro'
 
 <Section
   id='projects'
-  class='pt-20 relative gap-y-10 flex flex-col items-center'
+  class='pt-20 lg:px-0 px-5 relative gap-y-10 flex flex-col items-center'
 >
   <h1 class='text-5xl tracking-[3px]'>Proyectos</h1>
   <!-- Projects -->
   {PROJECTS.map((project) => <ProjectItem data={project} />)}
   <!-- Image 1 -->
   <picture
-    class='absolute top-0 left-0 h-full flex items-end justify-center pl-10'
+    class='absolute top-0 left-0 h-full lg:flex hidden items-end justify-center pl-10'
   >
     <img
       src='https://i.postimg.cc/gcNnFK69/SPG-transformed.webp'
@@ -24,7 +24,7 @@ import Section from '../ui/Section.astro'
   </picture>
   <!-- Image 2 -->
   <picture
-    class='flex justify-center items-start absolute right-0 top-0 h-full pr-10'
+    class='lg:flex hidden justify-center items-start absolute right-0 top-0 h-full pr-10'
   >
     <img
       src='https://i.postimg.cc/6Q5qhv1L/character-4.webp'
