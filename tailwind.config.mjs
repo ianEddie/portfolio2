@@ -7,7 +7,7 @@ export default {
         azul: '#20B6FF'
       },
       fontFamily: {
-        parrafo: 'Quicksand'
+        text: 'Chillax-Variable'
       }
     }
   },

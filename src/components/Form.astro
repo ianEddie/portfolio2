@@ -1,10 +1,5 @@
----
-import Button from '../ui/Button.astro'
-import style from '@/animations/animation.module.css'
----
-
 <form name='contact' netlify>
-  <div class={`${style.animation} form__group field`}>
+  <div class='form__group field'>
     <input
       type='text'
       class='form__field'
@@ -14,7 +9,7 @@ import style from '@/animations/animation.module.css'
     />
     <label for='name' class='form__label'>Nombre</label>
   </div>
-  <div class={`${style.animation} form__group field`}>
+  <div class='form__group field'>
     <input
       type='email'
       class='form__field'
@@ -24,7 +19,7 @@ import style from '@/animations/animation.module.css'
     />
     <label for='email' class='form__label'>E-mail</label>
   </div>
-  <div class={`${style.animation} col-span-2`}>
+  <div class='col-span-2'>
     <label>Escriba su mensaje</label>
     <textarea
       name='message'
@@ -32,19 +27,22 @@ import style from '@/animations/animation.module.css'
       required></textarea>
   </div>
   <div class='col-span-2 flex justify-center items-center'>
-    <Button type='submit'>Enviar</Button>
+    <button
+      type='submit'
+      class='bg-stone-950/60 hover:bg-stone-200 hover:text-stone-950 transition-all duration-300 shadow-lg shadow-stone-900/30 tracking-wide px-5 py-1 rounded-full font-medium backdrop-blur-[5px]'
+      >Enviar</button
+    >
   </div>
 </form>
 <style>
   form {
-    font-family: 'Quicksand';
-    @apply grid grid-cols-2 gap-10 mt-16;
+    @apply sm:grid sm:grid-cols-2 flex flex-col  gap-10 sm:w-fit w-[80%] text-center;
   }
   div {
     @apply flex flex-col gap-y-2;
   }
   input {
-    @apply text-center py-1  text-sm;
+    @apply text-center py-1 text-sm;
   }
 
   .form__group {

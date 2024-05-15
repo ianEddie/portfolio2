@@ -1,10 +1,12 @@
 ---
 import Section from '../ui/Section.astro'
 import SkillList from './SkillsList.astro'
-import style from '@/animations/animation.module.css'
 ---
 
-<Section id='skills' class='w-full flex flex-col items-center gap-y-16 lg:py-20 mt-24'>
-  <h1 class={`${style.animation} text-5xl tracking-[13px]`}>Skills</h1>
+<Section
+  id='skills'
+  class='w-full flex flex-col items-center gap-y-16 sm:mt-32 mt-28'
+>
+  <h1 class='text-5xl tracking-[13px]'>Skills</h1>
   <SkillList />
 </Section>

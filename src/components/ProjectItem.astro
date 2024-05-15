@@ -1,69 +1,49 @@
 ---
 import ProjectLink from './ProjectLink.astro'
 import TechPill from './TechPill.astro'
+import { Image } from 'astro:assets'
 
 const { data } = Astro.props
-const { tech, github, web, id, title, subtitle, description, image, order } =
-  data
+const { tech, github, web, id, title, description, image } = data
 ---
 
 <article
-  class='lg:w-[40%] w-full flex flex-col bg-indigo-900/40 p-5 rounded-3xl shadow-lg shadow-indigo-900 border border-indigo-400'
+  class='sm:w-[35%] w-full font-text flex flex-col justify-between sm:px-7 px-5 py-4 min-h-[500px] bg-violet-900/20 backdrop-blur-[5px] backdrop-brightness-[.9] border border-indigo-500/10 shadow-2xl shadow-stone-900/60 rounded-xl'
 >
-  <!--  -->
-  <div class='col-span-2 flex justify-between lg:text-xl text-base font-medium'>
+  <div
+    class='w-full flex justify-between items-center font-medium text-stone-200'
+  >
     <span>{id}.</span>
     <h2>{title}</h2>
   </div>
-  <!--  -->
-  <div class={`flex flex-col`}>
-    <h3 class='font-medium text-xl text-amber-300'>{subtitle}</h3>
-    <p
-      class='text-pretty lg:text-lg text-sm mt-3 text-neutral-200 tracking-wide font-parrafo font-semibold'
-    >
-      {description}
-    </p>
-    <div class='flex mt-5 gap-x-3'>
-      {
-        tech.map((item) => (
-          <TechPill>
-            <item.icon class={`size-5 ${item.style}`} />
-            <span class='lg:font-semibold text-center text-neutral-200 tracking-wide lg:text-base text-xs'>
-              {item.name}
-            </span>
-          </TechPill>
-        ))
-      }
-    </div>
-  </div>
-  <!-- Image  -->
-  <picture class='flex items-center justify-center mt-10'>
-    <img src={image} alt='screenshot' class='aspect-auto' />
+  <picture class='flex justify-center'>
+    <Image
+      src={image}
+      height='200'
+      width='300'
+      alt={title}
+      class='aspect-[7/4] w-[75%] h-auto image mt-2'
+    />
   </picture>
-  <!-- footer  -->
+  <div class='w-full flex justify-start sm:gap-x-3 gap-x-2'>
+    {
+      tech.map((item) => (
+        <TechPill>
+          <item.icon class={`${item.style} sm:size-6 size-4`} />
+          <span class='sm:text-base text-sm'>{item.name}</span>
+        </TechPill>
+      ))
+    }
+  </div>
+  <p
+    class='max-w-[90%] text-pretty text-neutral-300 font-medium sm:text-base text-sm'
+  >
+    {description}
+  </p>
   <ProjectLink github={github} web={web} />
 </article>
-
 <style>
-  p {
-    font-family: 'Quicksand';
-  }
-  article {
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
-  }
-
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      translate: 0 200px;
-      scale: 0;
-    }
-    to {
-      opacity: 1;
-      translate: 0 0;
-      scale: 1;
-    }
+  .image {
+    filter: drop-shadow(0px 4px 6px rgba(28, 25, 23, 0.5));
   }
 </style>

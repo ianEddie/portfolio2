@@ -1,35 +1,35 @@
 ---
 import Contact from './Contact.astro'
-import PointIcon from '../icons/PointIcon.astro'
+import { Image } from 'astro:assets'
 import Section from '../ui/Section.astro'
-import style from '@/animations/animation.module.css'
 ---
 
-<Section id='description' class='flex justify-center items-center relative'>
-  <img
-    src='https://i.postimg.cc/0j7KP7Tw/character-2-0.webp'
-    alt='Character image'
-    class={`${style.animation} lg:h-[90%] lg:w-auto lg:absolute lg:flex left-10 hidden`}
+<Section
+  id='description'
+  class='flex justify-center items-center relative sm:mt-0 mt-10'
+>
+  <Image
+    src='https://i.postimg.cc/5tXP3f9D/cat.webp'
+    width='100'
+    height='100'
+    alt='cat'
+    class='sm:flex hidden absolute left-[10%] image'
   />
-  <article
-    class='relative lg:w-1/2 w-full flex flex-col items-center lg:pt-20 pt-32'
-  >
-    <h1 class={style.animation}>Sobre mi</h1>
-    <h3
-      class='text-lime-300 absolute lg:top-0 top-12 right-0 flex items-center py-[2px] rounded-xl px-4 italic text-xl tracking-wide font-semibold'
-    >
-      <PointIcon />
-      <span> Disponible</span>
-    </h3>
-    <p
-      class={`${style.animation} mt-14 font-semibold text-[20px] lg:text-pretty text-balance px-8`}
-    >
+  <Image
+    src='https://i.postimg.cc/8P5NSrZv/character.webp'
+    width='230'
+    height='300'
+    alt='cat'
+    class='sm:flex hidden absolute right-10 image'
+  />
+  <article class='relative lg:w-1/2 w-full flex flex-col items-center'>
+    <h1>Sobre mi</h1>
+    <p class='mt-14 sm:text-[20px] lg:text-pretty text-balance px-8 font-text flex flex-col gap-y-2'>
       Soy ian, un desarrollador web apasionado y con habilidades solidas sobre
       front-end. Estoy listo para afrontar desafíos y contribuir al éxito de
       proyectos digitales. Me especializo en crear experiencias impactantes y
       funcionales, priorizando la innovación y la excelencia técnica.
-      <br />
-      <span class='text-amber-300 font-semibold'>
+      <span class='text-yellow-300 font-semibold tracking-wide'>
         Ofrezco soluciones eficientes y estéticamente atractivas.</span
       >
     </p>
@@ -42,7 +42,8 @@ import style from '@/animations/animation.module.css'
   h1 {
     @apply text-5xl tracking-[5px] text-neutral-100;
   }
-  p {
-    font-family: 'Montserrat', sans-serif;
+
+  .image {
+    filter: drop-shadow(2px 20px 10px rgba(12, 10, 9, 0.2));
   }
 </style>

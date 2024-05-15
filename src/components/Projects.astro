@@ -1,59 +1,18 @@
 ---
 import { PROJECTS } from '@/lib/projects-data.astro'
-import Button from '../ui/Button.astro'
 import ProjectItem from './ProjectItem.astro'
 import Section from '../ui/Section.astro'
 ---
 
 <Section
   id='projects'
-  class='pt-20 lg:px-0 px-5 relative gap-y-10 flex flex-col items-center'
+  class='sm:mt-24 mt-28 lg:px-0 px-5 relative gap-y-14 flex flex-col items-center'
 >
   <h1 class='text-5xl tracking-[3px]'>Proyectos</h1>
   <!-- Projects -->
-  {PROJECTS.map((project) => <ProjectItem data={project} />)}
-  <!-- Image 1 -->
-  <picture
-    class='absolute top-0 left-0 h-full lg:flex hidden items-end justify-center pl-10'
+  <div
+    class='flex sm:flex-row flex-col w-full items-center justify-center sm:gap-x-20 gap-x-0 gap-y-10'
   >
-    <img
-      src='https://i.postimg.cc/gcNnFK69/SPG-transformed.webp'
-      alt='Character image'
-      class='aspect-auto h-[30%] mb-40'
-    />
-  </picture>
-  <!-- Image 2 -->
-  <picture
-    class='lg:flex hidden justify-center items-start absolute right-0 top-0 h-full pr-10'
-  >
-    <img
-      src='https://i.postimg.cc/6Q5qhv1L/character-4.webp'
-      alt='character image'
-      class='aspect-auto h-[35%] mt-40'
-    />
-  </picture>
+    {PROJECTS.map((project) => <ProjectItem data={project} />)}
+  </div>
 </Section>
-<style>
-  article {
-    font-family: 'Outfit Variable', sans-serif;
-  }
-
-  img, h1 {
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 5% cover 40%;
-  }
-
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      translate: 0 200px;
-      scale: 0;
-    }
-    to {
-      opacity: 1;
-      translate: 0 0;
-      scale: 1;
-    }
-  }
-</style>

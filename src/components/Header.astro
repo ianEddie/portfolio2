@@ -1,25 +1,7 @@
 ---
+import { HEADER } from '@/lib/header-links'
 import Logo from '../icons/Logo.astro'
 import Background from '../ui/Background.astro'
-
-const HEADER = [
-  {
-    title: 'Sobre mi',
-    href: '/#description'
-  },
-  {
-    title: 'Proyectos',
-    href: '/#projects'
-  },
-  {
-    title: 'Skills',
-    href: '/#skills'
-  },
-  {
-    title: 'Contacto',
-    href: '/#contact'
-  }
-]
 ---
 
 <header id='header'>
@@ -108,7 +90,7 @@ const HEADER = [
   enlacesMenu.forEach((enlace) => {
     enlace.addEventListener('click', () => {
       // Cerrar el menú al hacer clic en un enlace
-      const checkboxMenu = document.getElementById('menu')
+      const checkboxMenu = document.getElementById('menu') as HTMLInputElement
       checkboxMenu.checked = false
     })
   })

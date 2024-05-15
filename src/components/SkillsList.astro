@@ -1,15 +1,12 @@
 ---
 import { SKILLS } from '../lib/skills-data.astro'
-import style from '@/animations/animation.module.css'
 ---
 
 <ul class='lg:flex grid grid-cols-4 gap-x-10 gap-y-10 lg:px-0 px-10'>
   {
     SKILLS.map((skill) => (
-      <li
-        class={`${style.animation} text-center lg:text-base text-sm flex flex-col items-center text-neutral-300 gap-y-1 font-semibold`}
-      >
-        <skill.icon class='size-14 text-purple-200' />
+      <li class=' text-center lg:text-base text-sm flex flex-col items-center text-stone-300 gap-y-1 font-semibold'>
+        <skill.icon class='sm:size-14 size-12 text-stone-300' />
         {skill.title}
       </li>
     ))

@@ -6,20 +6,20 @@ const { github, web } = Astro.props
 ---
 
 <footer
-  class='col-span-2 flex items-center justify-center gap-x-10 font-medium mt-7'
+  class='col-span-2 flex items-center justify-center sm:gap-x-10 gap-x-5 font-medium mt-4'
 >
   <a href={web} target='_blank'>
-    <WebIcon class='size-6 text-blue-400' />
-    visitar
+    <WebIcon class='size-5 text-blue-400' />
+    Visitar
   </a>
   <a href={github} target='_blank'>
-    <Githubicon class='size-6 text-neutral-400' />
-    repositorio
+    <Githubicon class='size-5 text-neutral-400' />
+    Github
   </a>
 </footer>
 <style>
   a {
-    @apply text-zinc-300 lg:text-base text-sm  flex items-center justify-center gap-x-2 px-5 py-[5px] rounded-full bg-neutral-900/90 shadow-md shadow-indigo-950/50
+    @apply text-zinc-300 text-sm flex items-center justify-center gap-x-2 px-5 py-[5px] rounded-full bg-neutral-900/90 shadow-md shadow-stone-950/30
     hover:scale-110 hover:bg-slate-100 hover:text-neutral-900 transition-all duration-300;
   }
 </style>

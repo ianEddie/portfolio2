@@ -42,7 +42,7 @@ const { title, description } = Astro.props
     border: 1px solid black;
     border-radius: 100px;
   }
-
+  /* Font for Main titles */
   @font-face {
     font-family: 'Slaytanic';
     src: url('/fonts/Slaytanic.woff') format('woff');
@@ -50,26 +50,21 @@ const { title, description } = Astro.props
     font-style: normal;
     font-display: swap;
   }
-  @font-face {
-    font-family: 'Quicksand';
-    src: url('/fonts/Quicksand.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('/fonts/Montserrat.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+  /* Font for Header Links */
   @font-face {
     font-family: 'BrunoAce-Regular';
     src: url('/fonts/BrunoAce-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+  }
+  /* Font for Text  */
+  @font-face {
+    font-family: 'Chillax-Variable';
+    src: url('../fonts/Chillax-Variable.woff2') format('woff2');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
   }
   h1 {
     font-family: 'Slaytanic';
