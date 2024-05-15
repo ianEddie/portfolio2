@@ -8,6 +8,7 @@ import { CONTACT_DATA } from '../lib/footer-contact-data.astro'
       <a
         href={item.href}
         target='_blank'
+        aria-label={item.ariaLabel}
         class={`rounded-lg p-[2px] hover:scale-110 hover:shadow-lg  hover:-translate-y-1  text-neutral-100 ${item.class} transition-all duration-300`}
       >
         <item.icon class='size-8' />
