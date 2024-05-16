@@ -13,11 +13,11 @@ import Section from '../ui/Section.astro'
     <Cv />
   </article>
   <!-- Image -->
-  <picture class='flex justify-end pt-20'>
+  <picture class='flex justify-end items-center pt-20'>
     <img
       src='https://i.postimg.cc/ZKZNXCW2/character-1-0.webp'
       alt='character image'
-      class='aspect-square h-[90%]'
+      class='aspect-[1/1]'
     />
   </picture>
 </Section>
@@ -28,5 +28,8 @@ import Section from '../ui/Section.astro'
   }
   h2 {
     font-family: 'BrunoAce-Regular', sans-serif;
+  }
+  img {
+    filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.5));
   }
 </style>

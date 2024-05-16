@@ -24,7 +24,9 @@ import Section from '../ui/Section.astro'
   />
   <article class='relative lg:w-1/2 w-full flex flex-col items-center'>
     <h1>Sobre mi</h1>
-    <p class='mt-14 sm:text-[20px] lg:text-pretty text-balance px-8 font-text flex flex-col gap-y-2'>
+    <p
+      class='mt-14 sm:text-[20px] lg:text-pretty text-balance px-8 font-text flex flex-col gap-y-2'
+    >
       Soy ian, un desarrollador web apasionado y con habilidades solidas sobre
       front-end. Estoy listo para afrontar desafíos y contribuir al éxito de
       proyectos digitales. Me especializo en crear experiencias impactantes y
@@ -44,6 +46,19 @@ import Section from '../ui/Section.astro'
   }
 
   .image {
-    filter: drop-shadow(2px 20px 10px rgba(12, 10, 9, 0.2));
+    filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.5));
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+  }
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      translate: 0 200px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
   }
 </style>
