@@ -8,6 +8,9 @@ export default {
       },
       fontFamily: {
         text: 'Chillax-Variable'
+      },
+      fontSize: {
+        title: '3rem'
       }
     }
   },

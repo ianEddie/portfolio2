@@ -1,12 +1,10 @@
 ---
+import Title from '@/ui/Title.astro'
 import Section from '../ui/Section.astro'
 import SkillList from './SkillsList.astro'
 ---
 
-<Section
-  id='skills'
-  class='w-full flex flex-col items-center gap-y-16 sm:mt-32 mt-28'
->
-  <h1 class='text-5xl tracking-[13px]'>Skills</h1>
+<Section id='skills' class='w-full flex flex-col items-center gap-y-10'>
+  <Title>Skills</Title>
   <SkillList />
 </Section>

@@ -1,0 +1,21 @@
+---
+import Background from '@/ui/Background.astro'
+import { PROJECTS_PAGE } from '@/lib/projects-page-data.astro'
+import ProjectItem from '@/components/ProjectItem.astro'
+import Layout from '@/layouts/Layout.astro'
+import BackButton from '@/components/BackButton.astro'
+---
+
+<Layout title='Proyectos' description='Proyectos destacados'>
+  <main class='min-h-screen relative'>
+    <section class='flex flex-col items-center gap-y-10 pt-10 pb-20'>
+      <div class='relative w-full flex justify-center items-center'>
+        <BackButton />
+        <h1 class='text-[3rem]'>Proyectos</h1>
+      </div>
+      <div class='flex flex-wrap justify-center gap-10 sm:px-0 px-10'>
+        {PROJECTS_PAGE.map((item) => <ProjectItem data={item} />)}
+      </div>
+    </section>
+  </main>
+</Layout>

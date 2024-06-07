@@ -2,11 +2,12 @@
 import Contact from './Contact.astro'
 import { Image } from 'astro:assets'
 import Section from '../ui/Section.astro'
+import Title from '@/ui/Title.astro'
 ---
 
 <Section
   id='description'
-  class='flex justify-center items-center relative sm:mt-0 mt-10'
+  class='flex justify-center items-center relative sm:mt-0 mt-20'
 >
   <Image
     src='https://i.postimg.cc/5tXP3f9D/cat.webp'
@@ -22,10 +23,10 @@ import Section from '../ui/Section.astro'
     alt='cat'
     class='sm:flex hidden absolute right-10 image'
   />
-  <article class='relative lg:w-1/2 w-full flex flex-col items-center'>
-    <h1>Sobre mi</h1>
+  <article class='relative lg:w-1/2 w-full flex flex-col items-center gap-y-10'>
+    <Title>Sobre mi</Title>
     <p
-      class='mt-14 sm:text-[20px] lg:text-pretty text-balance px-8 font-text flex flex-col gap-y-2'
+      class='sm:text-[1.2rem] text-pretty px-8 font-text flex flex-col gap-y-2'
     >
       Soy ian, un desarrollador web apasionado y con habilidades solidas sobre
       front-end. Estoy listo para afrontar desafíos y contribuir al éxito de
@@ -35,9 +36,7 @@ import Section from '../ui/Section.astro'
         Ofrezco soluciones eficientes y estéticamente atractivas.</span
       >
     </p>
-    <Contact
-      class='w-full mt-14 flex items-center flex-wrap justify-center gap-5'
-    />
+    <Contact class='w-full flex items-center flex-wrap justify-center gap-5' />
   </article>
 </Section>
 <style>

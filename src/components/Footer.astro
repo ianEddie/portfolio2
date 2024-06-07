@@ -1,13 +1,14 @@
 ---
 import Form from './Form.astro'
 import FooterContact from './FooterContact.astro'
+import Title from '@/ui/Title.astro'
 ---
 
 <footer
   id='contact'
-  class='h-screen flex flex-col items-center justify-around sm:mt-28 mt-10 font-text'
+  class='flex flex-col items-center gap-y-10 pb-10 font-text'
 >
-  <h1 class='text-5xl tracking-[5px] text-neutral-100'>Contacto</h1>
+  <Title>Contacto</Title>
   <Form />
   <FooterContact />
 </footer>
