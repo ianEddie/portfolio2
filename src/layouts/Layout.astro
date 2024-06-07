@@ -16,6 +16,28 @@ const { title, description } = Astro.props
     <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='./assets/favicon.svg' />
+    <!-- Fonts preload -->
+    <link
+      rel='preload'
+      href='/fonts/BrunoAce-Regular.woff2'
+      as='font'
+      type='font/woff2'
+      crossorigin
+    />
+    <link
+      rel='preload'
+      href='/fonts/Chillax-Variable.woff2'
+      as='font'
+      type='font/woff2'
+      crossorigin
+    />
+    <link
+      rel='preload'
+      href='/fonts/Slaytanic.woff'
+      as='font'
+      type='font/woff'
+      crossorigin
+    />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
@@ -23,66 +45,68 @@ const { title, description } = Astro.props
   <body>
     <Background />
     <slot />
-  </body><style is:global>
-    :root {
-      color-scheme: light dark;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-    body::-webkit-scrollbar {
-      width: 7px;
-      background-color: #8280cc;
-    }
-    body::-webkit-scrollbar-thumb {
-      background: #c7d2fe;
-      border: 1px solid black;
-      border-radius: 100px;
-    }
-    /* Font for Main titles */
-    @font-face {
-      font-family: 'Slaytanic';
-      src: url('/fonts/Slaytanic.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-    /* Font for Header Links */
-    @font-face {
-      font-family: 'BrunoAce-Regular';
-      src: url('/fonts/BrunoAce-Regular.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-    /* Font for Text  */
-    @font-face {
-      font-family: 'Chillax-Variable';
-      src: url('../fonts/Chillax-Variable.woff2') format('woff2');
-      font-weight: 200 700;
-      font-display: swap;
-      font-style: normal;
-    }
-    h1, h2 {
-      font-family: 'Slaytanic';
-    }
-    #header {
-      animation: blur linear both;
-      animation-timeline: scroll();
-      animation-range: 0 500px;
-    }
-
-    @keyframes blur {
-      to {
-        backdrop-filter: blur(10px);
-        @apply bg-blue-800/70 shadow-xl shadow-indigo-900/30;
+    <style is:global>
+      :root {
+        color-scheme: light dark;
       }
-    }
-  </style>
+      body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      body::-webkit-scrollbar {
+        width: 7px;
+        background-color: #8280cc;
+      }
+      body::-webkit-scrollbar-thumb {
+        background: #c7d2fe;
+        border: 1px solid black;
+        border-radius: 100px;
+      }
+      /* Font for Main titles */
+      @font-face {
+        font-family: 'Slaytanic';
+        src: url('/fonts/Slaytanic.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      /* Font for Header Links */
+      @font-face {
+        font-family: 'BrunoAce-Regular';
+        src: url('/fonts/BrunoAce-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      /* Font for Text  */
+      @font-face {
+        font-family: 'Chillax-Variable';
+        src: url('../fonts/Chillax-Variable.woff2') format('woff2');
+        font-weight: 200 700;
+        font-display: swap;
+        font-style: normal;
+      }
+      h1,
+      h2 {
+        font-family: 'Slaytanic';
+      }
+      #header {
+        animation: blur linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+      }
+
+      @keyframes blur {
+        to {
+          backdrop-filter: blur(10px);
+          @apply bg-blue-800/70 shadow-xl shadow-indigo-900/30;
+        }
+      }
+    </style>
+  </body>
 </html>
